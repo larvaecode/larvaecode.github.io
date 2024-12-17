@@ -10,11 +10,13 @@ ______________ ______________   _____  ___________
 
 /* ============= COLORS */
 :root {
-    --fg:white;
-    --bg:black;
-    --links:orange;
-    --translusent-bg:rgba(255, 166, 0, 0.164);
-    --accent:#333;
+    --licorice: #000;
+    --jet: #312f2fff;
+    --yellow-green: #b6c649ff;
+    --sandy-brown:#ee964b;
+    --rust: #bc3908ff;
+    --dull-yellow-green: rgba(181, 198, 73, 0.164);
+    --white: #ffffffff;
 }
 
 
@@ -33,8 +35,8 @@ ______________ ______________   _____  ___________
     cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
 }
 html {
-    color: var(--fg);
-    background-color: var(--bg);
+    color: var(--white);
+    background-color: var(--licorice);
 }
 body {
     font: calc(0.6rem + 0.05vw) 'dos';
@@ -46,10 +48,10 @@ header, nav, aside, main, footer {
     height: fit-content;
 }
 a {
-    color: var(--links);
+    color: var(--rust);
 }
 small {
-    color: var(--accent);
+    color: var(--jet);
 }
 img {
     display: inline;
@@ -76,6 +78,9 @@ img {
 }
 .center {
     align-content: center;
+}
+.altlink {
+    & a {color: var(--sandy-brown);}
 }
 .linkto {
     padding: 0.4rem;
@@ -184,7 +189,10 @@ body::before {
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
 }
+a:hover {
+    color: var(--yellow-green);
+}
 .linkto:hover {
     animation: shake 0.6s infinite;
-    background: var(--translusent-bg);
+    background: var(--dull-yellow-green);
 }
