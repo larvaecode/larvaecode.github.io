@@ -7,31 +7,29 @@ ______________ ______________   _____  ___________
                 \/        \/         \/        \/  */
 
 
-/* ============= COLORS */
 
+/* ============= COLORS */
 :root {
-    --fg:#ffffff;
-    --bg:#000;
-    --links:#910b02;
-    --links-hover:#e0230a;
-    --translusent-links:rgba(255, 0, 0, 0.171);
-    --accent:#525252;
+    --fg:white;
+    --bg:black;
+    --links:orange;
+    --translusent-bg:rgba(255, 166, 0, 0.164);
+    --accent:#333;
 }
 
-/* ============= FONTS */
 
+
+/* ============= FONTS */
 @font-face {
     font-family: 'dos';
     src: url("/content/font/ModernDOS8x16.ttf");
 }
 
-/* ============= ELEMENTS */
 
+
+/* ============= ELEMENTS */
 * {
-    margin: 0; 
-    padding: 0; 
-    max-width: 100%; 
-    box-sizing: border-box;
+    margin: 0; padding: 0; max-width: 100%; box-sizing: border-box;
     cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
 }
 html {
@@ -40,13 +38,9 @@ html {
 }
 body {
     font: calc(0.6rem + 0.05vw) 'dos';
-    padding: 1rem;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    image-rendering: pixelated;
-    text-rendering: geometricPrecision;
-    text-shadow: 0 0 3px;
-    letter-spacing: 1px;
+    padding: 1rem; line-height: 1.5; letter-spacing: 1px;
+    image-rendering: pixelated; text-rendering: geometricPrecision;
+    text-shadow: 0 0 3px; letter-spacing: 1px;
 }
 header, nav, aside, main, footer {
     height: fit-content;
@@ -54,15 +48,16 @@ header, nav, aside, main, footer {
 a {
     color: var(--links);
 }
-img {
-    display: inline;
-}
 small {
     color: var(--accent);
 }
+img {
+    display: inline;
+}
+
+
 
 /* ============= CLASSES */
-
 .full {
     height: 100dvh;
 }
@@ -90,8 +85,25 @@ small {
 }
 
 
-/* ============= IDS */
 
+/* ============= ANIMATIONS */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+/* ============= IDS */
 /* -------------------------------  INDEX */
 #index {
     /* background-image: url("https://wallpapercave.com/wp/iTBpoXA.jpg"); */
@@ -141,24 +153,9 @@ small {
     }
 }
 
-/* ============= ANIMATIONS */
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
 
 /* ============= ADJUSTMENTS */
-
 body::after {
     content: " ";
     display: block;
@@ -187,11 +184,7 @@ body::before {
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
 }
-a:hover {
-    color: var(--links-hover);
-}
 .linkto:hover {
     animation: shake 0.6s infinite;
-    background: var(--translusent-links);
-    & a {color: var(--links-hover);}
+    background: var(--translusent-bg);
 }
