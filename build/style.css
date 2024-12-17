@@ -26,11 +26,12 @@ ______________ ______________   _____  ___________
 }
 html {
     color: var(--white);
+    background-color: var(--licorice);
     background: url("/content/backgrounds/bg.gif");
 }
 body {
     font: calc(0.7rem + 0.05vw) Times;
-    padding: 1rem; line-height: 1.5; letter-spacing: 1px;
+    padding: 1rem; line-height: 1.6; letter-spacing: 1px;
     image-rendering: pixelated; text-rendering: geometricPrecision;
     text-shadow: 0 0 3px; letter-spacing: 2px;
 }
@@ -119,7 +120,6 @@ img {
 /* ============= IDS */
 /* -------------------------------  INDEX */
 #index {
-    /* background-image: url("https://wallpapercave.com/wp/iTBpoXA.jpg"); */
     & body {
         flex-direction: column;
         justify-content: space-between;
@@ -161,7 +161,7 @@ img {
     }
 }
 /* -------------------------------  SITEMAP */
-#map {
+#directory {
     & body {
         font-size: 180%;
         line-height: 2;
