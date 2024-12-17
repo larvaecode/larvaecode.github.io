@@ -1,25 +1,122 @@
+<!--                                                                                                     
+                                                                                                    
+                                 █████████                █████████                                 
+                             ████      ████████      ███████       ████                             
+  ████████  ██           █      ███ █████  ██████████████  █████ ███      █           ██  ████████  
+       ████████████████████      ███   ███    ████████    ███   ███      ████████████████████       
+             ███████  █████████   ███    █████  ████  ████     ███   █████████  ██ ████             
+       ██████████████   ██████████████████    ████████    ██████████████████   ██████████████       
+       ████████████████████████████████████████ ████ ████████████████████████████████████████       
+      █   ██████████████████   ████████████  ██████████  ████████████   █████████████████    █      
+       ███████████████    ██████ █████████████████████████████████  ██████    ███████████████       
+ ███████████████████████████████████████████████████████ ██████████████████████████████████████████ 
+   ██████   ████  █  ██████████   ███████  █ █ ██████ █ █  ███████   █████████   █  ████   ██████   
+      ██████████████  ██ ███  ██████████ ██████ ████ ██████ ███████████████  █  ██████████████      
+         ███████  ████████ █████████████████████████████████████████████  ██ █████  ███████         
+           █        ████████   ████  ███████████████████ ██████ ███████  ███████ █                  
+                      ██  ██   █ ███ ████ ██████████████ ██████ ███  █ ███   █   █                  
+                      █   ██████████████████ ██████ ███ ██████████████████   █                      
+                             ████   █████████  ███████ █████████ █   █                              
+                               █   ████████████████ ███████  █ ██    █                              
+                               █    ██  ██████████████████   █                                      
+                                    ██  ███     ██████   █   █                                      
+                                    █   ██    ████████                                              
+                                                ███                                                 
+                                                 ██                                                  -->
+                                                                                                    
 <!DOCTYPE html>
-<html lang="en" style="background-image: url('');">
+<html lang="en" id="index">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A strange dungeon...">
-    <meta name="keywords" content="maya's dungeon, mayasdungeon.com, ya, madmadmaya, madkitten">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/build/theme.css">
-    <link rel="alternate" href="/build/feed.xml" type="application/rss+xml" title="mayasdungeon.com">
-    <link rel="shortcut icon" href="/content/favicons/favicon.ico" type="image/x-icon">
     <script src="/build/actions.js"></script>
+    <link rel="stylesheet" href="/build/style.css">
+    <meta name="description" content="A strange dungeon....">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" href="/build/feed.xml" type="application/rss+xml" title="Dungeon Updates">
+    <meta name="keywords" content="maya's dungeon, mayasdungeon.com, madmadmaya, mmmd, madmadungeon, madkittenz">
     <title>mmmd</title>
 </head>
-<body style="display: flex; flex-direction: column; justify-content: space-between; height: 100dvh;">
-    <div id="nav">
-        <div class="navLink"><a href="/about.html"><img src="https://i.pinimg.com/736x/07/97/52/079752661b82ae1e7253f1b344f38972.jpg" alt=""><p>about.txt</p></a></div>
-        <div class="navLink"><a href="/memories.html"><img src="https://i.pinimg.com/736x/db/33/5f/db335fcb14999a31155565efcc1e265b.jpg" alt=""><p>/memories</p></a></div>
-        <div class="navLink"><a href="/offerings.html"><img src="https://i.pinimg.com/736x/97/d7/66/97d766261699ecad1a8af26acfc68a34.jpg" alt=""><p>/offerings</p></a></div>
-    </div>
-    <div id="title">
-        <img src="https://i.pinimg.com/736x/f2/66/e0/f266e098b861eda343089f53580c420d.jpg" alt="">
-        <p><small><a href="mailto:contact@mayasdungeon.com">Madmadmaya</a> &copy; <i>since July 2024</i></small></p>
-    </div>
+<body class="full wrap">
+    <!-- NAV -->
+    <nav class="grid">
+        <!-- ABOUT -->
+        <div class="linkto">
+            <a href="">
+                <img src="/content/assets/about-icon.png" alt="">
+                <p>About</p>
+            </a>
+        </div>
+        <!-- DIARY -->
+        <div class="linkto">
+            <a href="">
+                <img src="/content/assets/diary-icon.png" alt="">
+                <p>Diary</p>
+            </a>
+        </div>
+        <!-- GALLERY -->
+        <div class="linkto">
+            <a href="">
+                <img src="/content/assets/gallery-icon.png" alt="">
+                <p>Gallery</p>
+            </a>
+        </div>
+        <!-- WORKS -->
+        <div class="linkto">
+            <a href="">
+                <img src="/content/assets/works-icon.png" alt="">
+                <p>Works</p>
+            </a>
+        </div>
+        <!-- COLLECTION -->
+        <div class="linkto">
+            <a href="">
+                <img src="/content/assets/collection-icon.png" alt="">
+                <p>Collection</p>
+            </a>
+        </div>
+        <!-- SITEMAP -->
+        <div class="linkto">
+            <a href="/sitemap.html">
+                <img src="/content/assets/sitemap-icon.png" alt="">
+                <p>Sitemap</p>
+            </a>
+        </div>
+        <!-- GUESTBOOK -->
+        <div class="linkto">
+            <a href="https://mayasdungeon.atabook.org" target="_blank" rel="noopener noreferrer">
+                <img src="/content/assets/guestbook-icon.png" alt="">
+                <p>Guestbook</p>
+            </a>
+        </div>
+        <!-- SHOP -->
+        <div class="linkto">
+            <a href="https://madmadungeon.threadless.com" target="_blank" rel="noopener noreferrer">
+                <img src="/content/assets/shop-icon.png" alt="">
+                <p>Shop</p>
+            </a>
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header>
+        <!-- RSS -->
+        <a href="/build/feed.xml">Dungeon News</a>
+        <!-- LOGO -->
+        <img src="/content/assets/logo.png" alt="header logo">
+        <!-- FOOTER -->
+        <footer>
+            <!-- COPY -->
+            <p><small><a href="mailto:inquiries@mayasdungeon.com">MadMadmaya</a> &copy; <i>since July 2024</i>.</small></p>
+            <!-- DROPDOWN -->
+            <details>
+                <summary>LINKS</summary>
+                <!-- SOCIAL LINKS -->
+                <ul class="wrap listgroup">
+                    <li><a href="https://bsky.app/profile/madmadmaya.bsky.social" target="_blank" rel="noopener noreferrer"><img src="/content/assets/bluesky.png" alt="bluesky" class="small-icon"></a></li>
+                    <li><a href="https://www.youtube.com/@madmadmaya" target="_blank" rel="noopener noreferrer"><img src="/content/assets/youtube.png" alt="youtube" class="small-icon"></a></li>
+                    <li><a href="https://soundcloud.com/madmadmaya" target="_blank" rel="noopener noreferrer"><img src="/content/assets/soundcloud.png" alt="soundcloud" class="small-icon"></a></li>
+                </ul>
+            </details>
+        </footer>
+    </header>
 </body>
 </html>
