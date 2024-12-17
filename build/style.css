@@ -12,19 +12,9 @@ ______________ ______________   _____  ___________
 :root {
     --licorice: #000;
     --jet: #312f2fff;
-    --yellow-green: #b6c649ff;
     --sandy-brown:#ee964b;
-    --rust: #bc3908ff;
-    --dull-yellow-green: rgba(181, 198, 73, 0.164);
+    --rust: rgb(255, 81, 0);
     --white: #ffffffff;
-}
-
-
-
-/* ============= FONTS */
-@font-face {
-    font-family: 'dos';
-    src: url("/content/font/ModernDOS8x16.ttf");
 }
 
 
@@ -39,16 +29,19 @@ html {
     background-color: var(--licorice);
 }
 body {
-    font: calc(0.6rem + 0.05vw) 'dos';
+    font: calc(0.7rem + 0.05vw) Times;
     padding: 1rem; line-height: 1.5; letter-spacing: 1px;
     image-rendering: pixelated; text-rendering: geometricPrecision;
-    text-shadow: 0 0 3px; letter-spacing: 1px;
+    text-shadow: 0 0 3px; letter-spacing: 2px;
 }
 header, nav, aside, main, footer {
-    height: fit-content;
+    padding: 0.5rem auto;
 }
 a {
     color: var(--rust);
+}
+strong {
+    color: var(--sandy-brown);
 }
 small {
     color: var(--jet);
@@ -71,7 +64,7 @@ img {
     display: grid;
 }
 .small-icon {
-    max-width: 15px;
+    max-width: 20px;
 }
 .listgroup {
     list-style: none;
@@ -80,13 +73,22 @@ img {
     align-content: center;
 }
 .altlink {
-    & a {color: var(--sandy-brown);}
+    & a {color: var(--sandy-brown); text-decoration: none;}
 }
-.linkto {
+.enter {
     padding: 0.4rem;
     text-align: center;
     font-style: italic;
     border-radius: 3px;
+}
+.return {
+    max-width: 130px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    rotate: 180deg;
+    filter: brightness(40%);
 }
 
 
@@ -105,6 +107,12 @@ img {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+@keyframes flip {
+    to {
+        rotate: 0deg;
+        filter: brightness(100%);
+    }
+}
 
 
 
@@ -115,21 +123,21 @@ img {
     & body {
         flex-direction: column;
         justify-content: space-between;
+        flex-wrap: nowrap;
     }
     & header {
-        max-width: 240px;
-        margin-left: auto;
+        max-width: 200px;
+        margin-right: auto;
         text-align: center;
-        margin-top: auto;
     }
     & nav {
-        margin-right: auto;
+        margin-left: auto;
         gap: 0.3rem;
-        grid-template-columns: repeat(2, minmax(30px, 120px));
+        grid-template-columns: repeat(2, minmax(30px, 110px));
     }
     & footer ul {
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 }
 /* -------------------------------  ERROR */
@@ -142,19 +150,27 @@ img {
         text-decoration: none;
     }
 }
+/* -------------------------------  ABOUT */
+#belief {
+    & body {
+        font-size: 110%;
+    }
+}
+/* -------------------------------  SHRINES */
+#shrines {
+    & body {
+        font-size: 120%;
+        text-align: right;
+    }
+    & main {
+        margin-left: auto;
+    }
+}
 /* -------------------------------  SITEMAP */
-#sitemap {
+#map {
     & body {
         font-size: 150%;
         line-height: 2;
-        text-align: center;
-    }
-    & nav ul {
-        gap: 1rem;
-        justify-content: center;
-    }
-    & a {
-        text-decoration: none;
     }
 }
 
@@ -190,9 +206,11 @@ body::before {
     pointer-events: none;
 }
 a:hover {
-    color: var(--yellow-green);
+    color: var(--sandy-brown);
 }
 .linkto:hover {
     animation: shake 0.6s infinite;
-    background: var(--dull-yellow-green);
+}
+.return:hover {
+    animation: flip 0.6s forwards;
 }
