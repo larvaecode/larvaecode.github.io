@@ -13,10 +13,18 @@ ______________ ______________   _____  ___________
     --bg: #000;
     --fg: #fff;
     --accent:#333;
-    --color:red;
-    --light-color:red;
-    --dark-color:darkred;
-    --translucent-color:rgba(139, 0, 0, 0.151);
+    --color:orangered;
+    --light-color:orange;
+    --dark-color:darkorange;
+    --translucent-color:rgba(255, 140, 0, 0.158);
+}
+
+
+
+/* ============= FONTS */
+@font-face {
+    font-family: 'SerifMono';
+    src: url("/content/font/VerilySerifMono.otf");
 }
 
 
@@ -32,10 +40,10 @@ html {
     background: url("/content/backgrounds/bg.gif");
 }
 body {
-    font: calc(0.75rem + 0.05vw) Times;
-    padding: 0.7rem; line-height: 1.6;
+    font: calc(0.7rem + 0.05vw) 'SerifMono';
+    padding: 0.7rem; line-height: 1.7;
     image-rendering: pixelated; text-rendering: geometricPrecision;
-    text-shadow: 0 0 3px; letter-spacing: 2px;
+    text-shadow: 0 0 3px; letter-spacing: 1px;
 }
 header, nav, aside, main, footer, section {
     height: fit-content;
@@ -65,7 +73,7 @@ i {
     color: var(--light-color);
 }
 mark {
-    color: var(--fg);
+    color: var(--bg);
     background: var(--dark-color);
 }
 
@@ -108,12 +116,99 @@ mark {
     filter: brightness(40%);
 }
 .entry {
-    
+    text-align: right;
 }
 .entry-date {
     color: var(--dark-color);
     font-size: 120%;
     justify-content: space-between;
+}
+.photo, .video {
+    border: 1px solid;
+    text-align: center;
+}
+
+
+/* ============= IDS */
+/* -------------------------------  INDEX */
+#desktop {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#logo {
+    max-width: 200px;
+    margin-right: auto;
+    text-align: center;
+}
+#navigation {
+    margin-left: auto;
+    gap: 0.3rem;
+    font-size: 83%;
+    grid-template-columns: repeat(2, minmax(30px, 112px));
+}
+#social-links {
+    justify-content: center;
+    gap: 1rem;
+}
+/* -------------------------------  ERROR */
+#center {
+    align-content: center;
+    text-align: center;
+    font-size: 260%;
+}
+/* -------------------------------  BELEIF */
+#bigger-center {
+    font-size: 96%;
+    text-align: center;
+}
+#middle {
+    margin: auto;
+}
+#small-list {
+    text-align: left;
+    font-size: 90%;
+    padding-left: 2rem;
+}
+#alt-small {
+    color: var(--dark-color);
+}
+/* -------------------------------  HOLYBOOK */
+#book-nav {
+    gap: 1rem;
+}
+#top-right {
+    max-width: 700px;
+    margin-left: auto;
+    text-align: right;
+}
+/* -------------------------------  MEMORIES */
+#middle-center {
+    text-align: center;
+}
+#mem-nav {
+    gap: 1rem;
+}
+#left-top {
+    max-width: 900px;
+    margin-right: auto;
+    text-align: left;
+}
+#photos {
+
+}
+#videos {
+
+}
+/* -------------------------------  OFFERINGS */
+#projectNav {
+    gap: 1rem;
+}
+/* -------------------------------  SHRINES */
+/* -------------------------------  DIRECTORY */
+#top-left {
+    font-size: 180%;
+    line-height: 2;
 }
 
 
@@ -139,74 +234,6 @@ mark {
     }
 }
 
-
-
-/* ============= IDS */
-/* -------------------------------  INDEX */
-#index {
-    & body {
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-    & header {
-        max-width: 200px;
-        margin-right: auto;
-        text-align: center;
-    }
-    & nav {
-        margin-left: auto;
-        gap: 0.3rem;
-        grid-template-columns: repeat(2, minmax(30px, 110px));
-    }
-    & footer ul {
-        justify-content: center;
-        gap: 1rem;
-    }
-}
-/* -------------------------------  ERROR */
-#error {
-    & body {
-        align-content: center;
-        text-align: center;
-        font-size: 260%;
-    }
-}
-/* -------------------------------  BELEIF */
-#belief {
-    & body {
-        font-size: 102%;
-        text-align: center;
-    }
-    & main {
-        max-width: 1000px;
-        margin: auto;
-    }
-    & main ul {
-        text-align: left;
-    }
-}
-/* -------------------------------  HOLYBOOK */
-#holybook {
-    & nav ul {
-        gap: 1rem;
-    }
-    & main {
-        max-width: 700px;
-        margin-left: auto;
-        text-align: right;
-    }
-}
-/* -------------------------------  SHRINES */
-#shrines {
-}
-/* -------------------------------  DIRECTORY */
-#directory {
-    & body {
-        font-size: 180%;
-        line-height: 2;
-    }
-}
 
 
 /* ============= ADJUSTMENTS */
