@@ -11,11 +11,11 @@ ______________ ______________   _____  ___________
 /* ============= COLORS */
 :root {
     --bg: #000;
-    --fg: #fff;
+    --fg: #fff1d3;
     --accent:#333;
     --color:orangered;
     --light-color:orange;
-    --dark-color:darkorange;
+    --dark-color:darkred;
     --translucent-color:rgba(255, 140, 0, 0.158);
 }
 
@@ -53,7 +53,7 @@ a {
     color: var(--color);
 }
 strong {
-    color: var(--light-color);
+    color: var(--color);
 }
 small {
     color: var(--accent);
@@ -74,7 +74,7 @@ i {
 }
 mark {
     color: var(--bg);
-    background: var(--dark-color);
+    background: var(--color);
 }
 
 
@@ -266,7 +266,7 @@ body::before {
     pointer-events: none;
 }
 a:hover {
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 .enter:hover {
     animation: shake 0.6s infinite;
