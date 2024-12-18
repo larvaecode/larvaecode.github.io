@@ -10,11 +10,13 @@ ______________ ______________   _____  ___________
 
 /* ============= COLORS */
 :root {
-    --licorice: #000;
-    --jet: #312f2fff;
-    --sandy-brown:#ee964b;
-    --rust: #ff5100;
-    --white: #ffffffff;
+    --bg: #000;
+    --fg: #fff;
+    --accent:#333;
+    --color:red;
+    --light-color:red;
+    --dark-color:darkred;
+    --translucent-color:rgba(139, 0, 0, 0.151);
 }
 
 
@@ -25,32 +27,47 @@ ______________ ______________   _____  ___________
     cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
 }
 html {
-    color: var(--white);
-    background-color: var(--licorice);
+    color: var(--fg);
+    background-color: var(--bg);
     background: url("/content/backgrounds/bg.gif");
 }
 body {
-    font: calc(0.7rem + 0.05vw) Times;
-    padding: 1rem; line-height: 1.6; letter-spacing: 1px;
+    font: calc(0.75rem + 0.05vw) Times;
+    padding: 0.7rem; line-height: 1.6;
     image-rendering: pixelated; text-rendering: geometricPrecision;
     text-shadow: 0 0 3px; letter-spacing: 2px;
 }
-header, nav, aside, main, footer {
-    padding: 0.5rem auto;
+header, nav, aside, main, footer, section {
+    height: fit-content;
+    padding: 0.3rem;
 }
 a {
-    color: var(--rust);
+    color: var(--color);
 }
 strong {
-    color: var(--sandy-brown);
+    color: var(--light-color);
 }
 small {
-    color: var(--jet);
+    color: var(--accent);
 }
 img {
     display: inline;
 }
-
+hr {
+    border: none;
+    border-top: 1px dotted var(--accent);
+    margin: 0.3rem 0;
+}
+ul, ol, dl {
+    list-style-position: inside;
+}
+i {
+    color: var(--light-color);
+}
+mark {
+    color: var(--fg);
+    background: var(--dark-color);
+}
 
 
 /* ============= CLASSES */
@@ -70,11 +87,10 @@ img {
 .listgroup {
     list-style: none;
 }
-.center {
-    align-content: center;
-}
 .altlink {
-    & a {color: var(--sandy-brown); text-decoration: none;}
+    & a {
+        text-decoration: none;
+    }
 }
 .enter {
     padding: 0.4rem;
@@ -90,6 +106,14 @@ img {
     padding: 1rem;
     rotate: 180deg;
     filter: brightness(40%);
+}
+.entry {
+    
+}
+.entry-date {
+    color: var(--dark-color);
+    font-size: 120%;
+    justify-content: space-between;
 }
 
 
@@ -143,31 +167,46 @@ img {
 /* -------------------------------  ERROR */
 #error {
     & body {
+        align-content: center;
         text-align: center;
         font-size: 260%;
     }
 }
-/* -------------------------------  ABOUT */
+/* -------------------------------  BELEIF */
 #belief {
     & body {
-        font-size: 110%;
+        font-size: 102%;
+        text-align: center;
+    }
+    & main {
+        max-width: 1000px;
+        margin: auto;
+    }
+    & main ul {
+        text-align: left;
+    }
+}
+/* -------------------------------  HOLYBOOK */
+#holybook {
+    & nav ul {
+        gap: 1rem;
+    }
+    & main {
+        max-width: 700px;
+        margin-left: auto;
+        text-align: right;
     }
 }
 /* -------------------------------  SHRINES */
 #shrines {
-    & body {
-        font-size: 120%;
-        text-align: center;
-    }
 }
-/* -------------------------------  SITEMAP */
+/* -------------------------------  DIRECTORY */
 #directory {
     & body {
         font-size: 180%;
         line-height: 2;
     }
 }
-
 
 
 /* ============= ADJUSTMENTS */
@@ -200,11 +239,11 @@ body::before {
     pointer-events: none;
 }
 a:hover {
-    color: var(--sandy-brown);
-    font-style: italic;
+    color: var(--dark-color);
 }
-.linkto:hover {
+.enter:hover {
     animation: shake 0.6s infinite;
+    background: var(--translucent-color);
 }
 .return:hover {
     animation: flip 0.6s forwards;
