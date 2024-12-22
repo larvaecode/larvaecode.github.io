@@ -57,8 +57,9 @@ strong, summary {
 small {
     color: var(--dark-color);
 }
-img {
+img, video {
     display: inline;
+    filter: grayscale(100%);
 }
 hr {
     border: none;
@@ -72,6 +73,17 @@ mark {
     color: var(--bg);
     background: var(--color);
 }
+button {
+    border: 1px solid;
+    font-family: 'dos';
+    padding: 0.2rem 0.4rem;
+    color: var(--bg);
+    background: var(--color);
+    margin: 0.2rem;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
 
 
 /* ============= CLASSES */
@@ -96,6 +108,9 @@ mark {
         text-decoration: none;
     }
 }
+.blur {
+    filter: blur(9px);
+}
 .enter {
     padding: 0.5rem;
     text-align: center;
@@ -111,6 +126,12 @@ mark {
     rotate: 180deg;
     filter: brightness(40%);
 }
+.default {
+    display: block;
+}
+.find {
+    display: none;
+}
 .entry {
     text-align: right;
 }
@@ -118,87 +139,107 @@ mark {
     font-size: 120%;
     justify-content: space-between;
 }
-.photo, .video {
-    border: 1px solid;
-    text-align: center;
+.photo {
+    padding: 0.4rem;
 }
+.video {
+    padding: 0.4rem;
+}
+.game {
+
+}
+
 
 
 /* ============= IDS */
 /* -------------------------------  INDEX */
-#desktop {
+#bodyIndex {
     flex-direction: column;
     justify-content: space-between;
 }
-#logo {
+#headerIndex {
     max-width: 250px;
     margin-left: auto;
     text-align: center;
     margin-top: auto;
 }
-#navigation {
+#navIndex {
     margin-right: auto;
     gap: 0.8rem;
     grid-template-columns: repeat(2, minmax(30px, 100px));
 }
-#social-links {
+#socialsIndex {
     justify-content: center;
     gap: 1rem;
 }
-/* -------------------------------  ERROR */
-#center {
+/* -------------------------------  404 */
+#body404 {
     align-content: center;
     text-align: center;
     font-size: 260%;
 }
-/* -------------------------------  BELEIF */
-#bigger-center {
+/* -------------------------------  ABOUT */
+#centerAbout {
     font-size: 96%;
     text-align: center;
 }
-#middle {
+#mainAbout {
     margin: auto;
     max-width: 1000px;
 }
-#small-list {
+#listAbout {
     text-align: left;
     font-size: 90%;
     padding-left: 2rem;
 }
-/* -------------------------------  HOLYBOOK */
-#book-nav {
+/* -------------------------------  DIARY */
+#navDiary {
     gap: 1rem;
 }
-#top-right {
+#mainDiary {
     max-width: 700px;
     margin-left: auto;
     text-align: right;
 }
-/* -------------------------------  MEMORIES */
-#middle-center {
+/* -------------------------------  GALLERY */
+#bodyGallery {
     text-align: center;
 }
-#mem-nav {
+#navGallery {
     gap: 1rem;
 }
-#left-top {
-    max-width: 900px;
+#mainGallery {
+    max-width: 1200px;
     margin-right: auto;
     text-align: left;
 }
-#photos {
-
+#photosGallery {
+    gap: 0.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 230px));
 }
-#videos {
-
+#videosGallery {
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 500px));
 }
-/* -------------------------------  OFFERINGS */
-#projectNav {
+/* -------------------------------  PROJECTS */
+#projectsNav {
     gap: 1rem;
 }
-/* -------------------------------  SHRINES */
-/* -------------------------------  DIRECTORY */
-#top-left {
+#projectsDefault, #projectsArt, #projectsMusic, #projectsGames {
+
+}
+/* -------------------------------  COLLECTION */
+#collectionGifs, #collectionButtons, #collectionBlinkies {
+    text-align: right;
+}
+#collectionDividers, #collectionButtons {
+    text-align: left;
+}
+#collectionWebsites {
+    text-align: center;
+}
+/* -------------------------------  SITEMAP */
+#bodySitemap {
     font-size: 180%;
     line-height: 2;
 }
@@ -259,6 +300,9 @@ body::before {
 }
 a:hover {
     color: var(--light-color);
+}
+button:hover {
+    background: var(--light-color);
 }
 .enter:hover {
     animation: shake 0.6s infinite;

@@ -9,17 +9,33 @@
 </head>
 <body>
     <nav>
-        <ul class="listgroup wrap" id="projectNav">
-            <li><a href="#art">ART</a></li>
-            <li><a href="#music">MUSIC</a></li>
-            <li><a href="#games">GAMES</a></li>
+        <!-- PROJECTS NAV -->
+        <ul class="listgroup wrap" id="projectsNav">
+            <li><button onclick="showContent('projectsArt')">ART</button></li>
+            <li><button onclick="showContent('projectsMusic')">MUSIC</button></li>
+            <li><button onclick="showContent('projectsGames')">GAMES</button></li>
         </ul>
     </nav>
     <main>
-        <p>( nothing yet )</p>
-        <section id="art"></section>
-        <section id="music"></section>
-        <section id="games"></section>
+        <!-- PROJECTS DEFAULT -->
+        <section id="projectsDefault" class="default">
+            <img src="" alt="default image">
+            <br> <br>
+            <p>All my cute stuff! <i>Hope you enjoy!</i></p>
+            <p><strong>Choose a section from above to show content.</strong></p>
+        </section>
+        <!-- PROJECTS ART -->
+        <section id="projectsArt" class="find">
+            <p>(nothing yet)</p>
+        </section>
+        <!-- PROJECTS MUSIC -->
+        <section id="projectsMusic" class="find">
+            <p>(nothing yet)</p>
+        </section>
+        <!-- PROJECTS GAMES -->
+        <section id="projectsGames" class="find">
+            <p>(nothing yet)</p>
+        </section>
     </main>
     <div class="return">
         <a href="/index.html">
