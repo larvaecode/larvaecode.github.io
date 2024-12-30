@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <!-- SETUP -->
-    <title>Dungeon News</title>
+    <title>Maya's Dungeon RSS</title>
     <description>Updates from the dungeon...</description>
     <link>https://mayasdungeon.com</link>
     <lastBuildDate>
@@ -11,8 +11,7 @@
     <ttl>20000</ttl>
 <!-- SETUP END -->
 
-<!-- DEC 22 2024 -->
-    <item>
+    <!-- <item>
         <title>Welcome to Maya's Dungeon!</title>
         <description>
             Hello. This is the first item in the RSS Feed, and the first update. Still figuring stuff out. Not much to say except that there have been updates to the
@@ -22,7 +21,7 @@
         <pubDate>
             Sun, 22 Dec 2024 19:59:10 +0000
         </pubDate>
-    </item>
+    </item> -->
 
 </channel>
 </rss>

@@ -20,6 +20,19 @@ ______________ ______________   _____  ___________
 
 
 
+/* ============= SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+} 
+::-webkit-scrollbar-track {
+    background: var(--fg);
+} 
+::-webkit-scrollbar-thumb {
+    background: var(--color);
+}  
+
+
+
 /* ============= FONTS */
 @font-face {
     font-family: 'dos';
@@ -63,7 +76,7 @@ img, video {
 }
 hr {
     border: none;
-    border-top: 1px dotted var(--accent);
+    border-top: 1px dotted var(--dark-color);
     margin: 0.3rem 0;
 }
 ul, ol, dl {
@@ -94,11 +107,17 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+.hf-center {
+    text-align: center;
+}
 .grid {
     display: grid;
 }
 .small-icon {
     max-width: 20px;
+}
+.mid-icon {
+    max-width: 70px;
 }
 .listgroup {
     list-style: none;
@@ -125,6 +144,9 @@ button {
     padding: 1rem;
     rotate: 180deg;
     filter: brightness(40%);
+}
+.blank-bg {
+    background: var(--bg);
 }
 .default {
     display: block;
@@ -174,31 +196,16 @@ button {
 }
 /* -------------------------------  404 */
 #body404 {
+    font-size: 160%;
     align-content: center;
     text-align: center;
-    font-size: 260%;
 }
 /* -------------------------------  ABOUT */
-#centerAbout {
-    font-size: 96%;
-    text-align: center;
-}
-#mainAbout {
-    margin: auto;
-    max-width: 1000px;
-}
-#listAbout {
-    text-align: left;
-    font-size: 90%;
-    padding-left: 2rem;
-}
 /* -------------------------------  DIARY */
 #navDiary {
     gap: 1rem;
 }
 #mainDiary {
-    max-width: 700px;
-    margin-left: auto;
     text-align: right;
 }
 /* -------------------------------  GALLERY */
@@ -209,8 +216,6 @@ button {
     gap: 1rem;
 }
 #mainGallery {
-    max-width: 1200px;
-    margin-right: auto;
     text-align: left;
 }
 #photosGallery {
@@ -229,6 +234,8 @@ button {
 
 }
 /* -------------------------------  COLLECTION */
+#collectionBody {
+}
 #collectionGifs, #collectionButtons, #collectionBlinkies {
     text-align: right;
 }
@@ -240,7 +247,7 @@ button {
 }
 /* -------------------------------  SITEMAP */
 #bodySitemap {
-    font-size: 180%;
+    font-size: 170%;
     line-height: 2;
 }
 
@@ -310,4 +317,7 @@ button:hover {
 }
 .return:hover {
     animation: flip 0.6s forwards;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-color);
 }
